@@ -150,35 +150,32 @@ public class ContactList {
             else if (num == 6) {
                 System.out.println("Enter a first name: ");
                 String name = input.next();
-                Person found = searchByFirstName(name);
                 // Checks if the name inputed is not the list
-                if (found == null) {
+                if (searchByFirstName(name) == null) {
                     System.out.println(name + " is not in the list");
                 }
                 else {
-                    System.out.println(found);
+                    System.out.println(searchByFirstName(name.toString()));
                 }
             }
             else if (num == 7) {
                 System.out.println("Enter a last name: ");
                 String lastName = input.next();
-                Person found = searchByLastName(lastName);
-                if (found == null) {
+                if (searchByLastName(lastName) == null) {
                     System.out.println(lastName + " is not in the list");
                 }
                 else {
-                    System.out.println(found);
+                    System.out.println(searchByLastName(lastName.toString()));
                 }
             }
             else if (num == 8) {
                 System.out.println("Enter a phone number: ");
                 String phoneNumber = input.next();
-                Person found = searchByPhoneNumber(phoneNumber);
-                if (found == null) {
+                if (searchByPhoneNumber(phoneNumber) == null) {
                     System.out.println(phoneNumber + " is not in the list");
                 }
                 else {
-                    System.out.println(found);
+                    System.out.println(searchByPhoneNumber(phoneNumber.toString()));
                 }
             }
             else if (num == 0) {
